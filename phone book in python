@@ -1,0 +1,68 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO6mGR6p+L8BpPCwMludQRn",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Bindhushree2529/100-days-of-python-code/blob/main/phone%20book%20in%20python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "NChtfFVMY45t"
+      },
+      "outputs": [],
+      "source": [
+        "names = []\n",
+        "phone_numbers = []\n",
+        "num = 3\n",
+        "\n",
+        "\n",
+        "for i in range(num):\n",
+        "    name = input(\"Name: \")\n",
+        "    phone_number = input(\"Phone Number: \") # for convert to int => int(input(\"Phone Number: \"))\n",
+        "\n",
+        "    names.append(name)\n",
+        "    phone_numbers.append(phone_number)\n",
+        "\n",
+        "print(\"\\nName\\t\\t\\tPhone Number\\n\")\n",
+        "\n",
+        "for i in range(num):\n",
+        "    print(\"{}\\t\\t\\t{}\".format(names[i], phone_numbers[i]))\n",
+        "\n",
+        "search_term = input(\"\\nEnter search term: \")\n",
+        "\n",
+        "print(\"Search result:\")\n",
+        "\n",
+        "if search_term in names:\n",
+        "    index = names.index(search_term)\n",
+        "    phone_number = phone_numbers[index]\n",
+        "    print(\"Name: {}, Phone Number: {}\".format(search_term, phone_number))\n",
+        "\n",
+        "else:\n",
+        "    print(\"Name Not Found\")"
+      ]
+    }
+  ]
+}
